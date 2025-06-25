@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Lokesh Kumar Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Fontawesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <!-- Move to up button -->
+  <div class="scroll-button">
+    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  <!-- navgaition menu -->
+  <nav class="sticky">
+    <div class="navbar">
+      <div class="logo"><a href="#">Lokesh Kumar</a></div>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <div class="cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+      </ul>
+      <div class="media-icons">
+        <a href="https://github.com/Lokesh-DataScience" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        <a href="https://medium.com/@lokeshkumar.engineer" target="_blank" rel="noopener"><i class="fab fa-medium-m"></i></a>
+        <a href="https://www.linkedin.com/in/lokesh-kumar-info?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BycOFyeS3Sp%2BwBV2tTaPYAQ%3D%3D" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- Home Section Start -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <div class="text">
+        <div class="text-one">Hello,</div>
+        <div class="text-two">I'm Lokesh Kumar</div>
+        <div class="text-three"><span id="sliding-text">AI/ML Engineer</span></div>
+        <div class="text-four">From Chhattisgarh</div>
+      </div>
+      <div class="button">
+        <a href="https://mail.google.com/mail/?view=cm&to=lokeshkumar.engineer@gmail.com" target="_blank"
+          rel="noopener">
+          <button type="button">Hire Me</button>
+        </a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down"
+      style="display: flex; flex-direction: column; align-items: center; position: absolute; left: 50%; bottom: 32px; transform: translateX(-50%); text-decoration: none;">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+        <path d="M12 16V4M12 16L7 11M12 16L17 11" stroke="#4070f4" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+      <span style="color:#4070f4; font-size:14px; margin-top:4px;">Scroll Down</span>
+    </a>
+  </section>
+
+  <!-- About Section Start -->
+  <section class="about" id="about">
+    <div class="content">
+      <div class="title"><span>About Me</span></div>
+      <div class="about-details">
+        <div class="left">
+          <img src="images/about.jpg" alt="" />
+        </div>
+        <div class="right">
+          <div class="topic">Learning is my passion</div>
+          <p>
+            I’m deeply passionate about learning and evolving in the ever-changing world of technology.
+            From exploring the depths of machine learning and statistical thinking to building automation tools,
+            scraping live data, and diving into stock market analytics—I thrive on uncovering how things work and how
+            they can be improved.
+            Whether it’s integrating real-time data visualizations, experimenting with AI agents for freelance
+            automation,
+            or diving into frontend frameworks like React, I constantly seek out opportunities to learn and apply new
+            skills. This drive fuels every project I take on, and I’m always excited to push boundaries with each new
+            challenge.
+          </p>
+          <div class="button">
+            <a href="resume/Profile.pdf" download>
+              <button type="button">Download Resume</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Skill Section Start -->
+  <!-- Section Tag and Other Div will same where we need to put same CSS -->
+  <section class="skills" id="skills">
+    <div class="content">
+      <div class="title"><span>My Skills</span></div>
+      <div class="skills-details">
+        <div class="text">
+          <div class="topic">Skills Reflects My Knowledge</div>
+          <p>My journey in tech is fueled by curiosity and hands-on experimentation across multiple domains.
+            I have a strong foundation in Python, which powers much of my development work.
+            I actively apply Machine Learning and Deep Learning techniques using tools like Pandas,
+            NumPy, and Scikit-learn to draw insights and build predictive models.
+            I’m deeply interested in Generative AI and have started creating intelligent systems using
+            Agentic AI concepts with frameworks like LangChain. On the backend, I build and deploy efficient APIs using
+            FastAPI and Flask,
+            bringing my ideas into real-world applications with speed and structure.</p>
+          <div class="experience">
+            <div class="num">3</div>
+            <div class="exp">
+              Years Of <br />
+              Working Experience
+            </div>
+          </div>
+        </div>
+        <div class="boxes">
+          <div class="box">
+            <div class="topic">Python</div>
+            <div class="per">90%</div>
+          </div>
+          <div class="box">
+            <div class="topic">SQL</div>
+            <div class="per">70%</div>
+          </div>
+          <div class="box">
+            <div class="topic">Generative AI</div>
+            <div class="per">70%</div>
+          </div>
+          <div class="box">
+            <div class="topic">Agentic AI</div>
+            <div class="per">40%</div>
+          </div>
+          <div class="box">
+            <div class="topic">Machine Learning</div>
+            <div class="per">80%</div>
+          </div>
+          <div class="box">
+            <div class="topic">FastAPI/Flask</div>
+            <div class="per">80%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Projects Section Start -->
+  <section class="projects" id="projects">
+    <div class="content">
+      <div class="title"><span>My Projects</span></div>
+      <div class="boxes">
+        <a href="projects/data-science.html" class="box">
+          <div class="icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <div class="topic">Data Science Projects</div>
+          <p>Explore end-to-end data science solutions, from data wrangling to predictive modeling and deployment.</p>
+        </a>
+        <a href="projects/data-analysis.html" class="box">
+          <div class="icon">
+            <i class="fas fa-chart-bar"></i>
+          </div>
+          <div class="topic">Data Analysis Projects</div>
+          <p>Insightful data analysis projects focusing on extracting actionable insights from complex datasets.</p>
+        </a>
+        <a href="projects/machine-learning.html" class="box">
+          <div class="icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="topic">ML Projects</div>
+          <p>Hands-on machine learning projects including classification, regression, and clustering algorithms.</p>
+        </a>
+        <a href="projects/ai.html" class="box">
+          <div class="icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div class="topic">AI Projects</div>
+          <p>Innovative AI projects leveraging deep learning, NLP, and generative models for real-world applications.
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Me section Start -->
+  <section class="contact" id="contact">
+    <div class="content">
+      <div class="title"><span>Contact Me</span></div>
+      <div class="text">
+        <div class="topic">Got a Project or Idea?</div>
+        <p>If you’re working on something exciting or need help turning an idea into reality, I’d love to hear from you!
+          Whether it's a tech collaboration, freelance project, or just a quick chat about emerging technologies—let’s
+          connect and build something impactful together.</p>
+        <div class="button">
+          <a href="https://mail.google.com/mail/?view=cm&to=lokeshkumar.engineer@gmail.com" target="_blank"
+            rel="noopener">
+            <button type="button">Let's Chat</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section Start -->
+  <footer>
+    <div class="text">
+      <span>Created By Lokesh Kumar</a> | &#169; 2025 All Rights Reserved</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
