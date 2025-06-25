@@ -68,3 +68,19 @@ setInterval(() => {
 
 // Initial call
 updateSlidingText();
+
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+const hireMeLink = document.getElementById("hireMeLink");
+const contactMeLink = document.getElementById("contactMeLink");
+
+if (hireMeLink) {
+  hireMeLink.href = isMobile
+    ? "mailto:lokeshkumar.engineer@gmail.com"
+    : "https://mail.google.com/mail/?view=cm&to=lokeshkumar.engineer@gmail.com";
+}
+if (contactMeLink) {
+  contactMeLink.href = isMobile
+    ? "mailto:lokeshkumar.engineer@gmail.com"
+    : "https://mail.google.com/mail/?view=cm&to=lokeshkumar.engineer@gmail.com";
+}
