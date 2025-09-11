@@ -681,3 +681,52 @@ footer .text span a:hover {
     opacity: 1;
   }
 }
+/* Experience Section */
+.experience {
+  background: #fff;
+}
+
+.experience .content {
+  padding: 40px 0;
+}
+
+.experience-details {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.exp-box {
+  background: #f0f8ff;
+  border-radius: 10px;
+  padding: 24px 20px;
+  box-shadow: 0 2px 8px rgba(64,112,244,0.07);
+}
+
+.exp-role {
+  font-size: 22px;
+  font-weight: 600;
+  color: #4070f4;
+}
+
+.exp-company {
+  font-size: 18px;
+  font-weight: 500;
+  color: #0E2431;
+  margin-top: 4px;
+}
+
+.exp-duration {
+  font-size: 15px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.exp-desc ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #0E2431;
+  font-size: 16px;
+}
