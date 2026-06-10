@@ -76,11 +76,11 @@ const contactMeLink = document.getElementById("contactMeLink");
 
 if (hireMeLink) {
   hireMeLink.href = isMobile
-    ? "mailto:lokeshkumar.engineer@gmail.com"
-    : "https://mail.google.com/mail/?view=cm&to=lokeshkumar.engineer@gmail.com";
+    ? "mailto:hellokumarlokesh@gmail.com"
+    : "https://mail.google.com/mail/?view=cm&to=hellokumarlokesh@gmail.com";
 }
 if (contactMeLink) {
   contactMeLink.href = isMobile
-    ? "mailto:lokeshkumar.engineer@gmail.com"
-    : "https://mail.google.com/mail/?view=cm&to=lokeshkumar.engineer@gmail.com";
+    ? "mailto:hellokumarlokesh@gmail.com"
+    : "https://mail.google.com/mail/?view=cm&to=hellokumarlokesh@gmail.com";
 }
