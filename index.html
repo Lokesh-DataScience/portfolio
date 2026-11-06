@@ -1,300 +1,254 @@
 <!DOCTYPE html>
-<!-- Website - www.codingnepalweb.com -->
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Lokesh Kumar Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Fontawesome CDN Link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lokesh Kumar – AI Engineer</title>
+<meta name="description" content="Lokesh Kumar is an AI Engineer building RAG systems, text-to-SQL agents, LLM applications and MLOps pipelines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F9FB;--panel:#FFFFFF;--ink:#14202B;--muted:#556575;--line:#D9E1E8;--accent:#1F5FBF;--accent-ink:#FFFFFF;--chip:#E8EFF8;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0F1720;--panel:#16212D;--ink:#E6EDF3;--muted:#9AABBB;--line:#263444;--accent:#6EA8FF;--accent-ink:#0F1720;--chip:#1D2B3B;color-scheme:dark}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:260px 1fr;gap:64px}
+aside{position:sticky;top:0;align-self:start;padding:56px 0;height:100vh;display:flex;flex-direction:column;gap:24px}
+aside .name{font-size:30px;font-weight:700}
+aside .role{color:var(--muted);margin:4px 0 0}
+nav{display:flex;flex-direction:column;gap:6px}
+nav a{color:var(--muted);padding:2px 0 2px 14px;border-left:2px solid var(--line)}
+nav a:hover{color:var(--ink);border-color:var(--accent);text-decoration:none}
+.contact{margin-top:auto;display:flex;flex-direction:column;gap:4px;font-size:14px;color:var(--muted)}
+main{padding:56px 0 96px;min-width:0}
+section{padding-bottom:56px}
+h2{font-size:26px;margin-bottom:20px}
+.lede{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(28px,4.2vw,44px);font-weight:500;line-height:1.2;margin:0 0 20px;max-width:20em}
+.sub{color:var(--muted);max-width:60ch;margin:0 0 24px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:10px 18px;border-radius:6px;font-weight:500;border:1px solid var(--accent)}
+.btn.p{background:var(--accent);color:var(--accent-ink)}
+.btn.s{color:var(--accent)}
+.btn:hover{text-decoration:none;opacity:.88}
+.job{padding:0 0 22px 20px;border-left:2px solid var(--line);margin-left:4px;position:relative}
+.job:before{content:"";position:absolute;left:-6px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.job h3{font-size:18px}
+.job .meta{color:var(--muted);font-size:14px;margin:2px 0 8px}
+ul{margin:0;padding-left:20px}
+li{margin:4px 0;max-width:68ch}
+.proj{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:24px 0;border-top:1px solid var(--line)}
+.proj:last-of-type{border-bottom:1px solid var(--line)}
+.fact b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:32px;line-height:1.1;color:var(--accent)}
+.fact span{font-size:13px;color:var(--muted)}
+.proj h3{font-size:20px;margin-bottom:6px}
+.proj p{margin:0 0 10px;max-width:68ch}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px;padding:0;list-style:none}
+.tags li{margin:0;background:var(--chip);padding:2px 10px;border-radius:999px;font-size:13px}
+.skills{display:grid;grid-template-columns:150px 1fr;gap:10px 24px;margin:0}
+.skills dt{font-weight:500}
+.skills dd{margin:0;color:var(--muted)}
+.more{columns:2;column-gap:32px}
+@media (max-width:860px){
+.wrap{grid-template-columns:1fr;gap:0}
+aside{position:static;height:auto;padding:32px 0 0}
+nav{flex-direction:row;flex-wrap:wrap;gap:6px 16px}
+nav a{border-left:0;padding:0}
+.contact{margin-top:0}
+main{padding-top:32px}
+.proj,.skills{grid-template-columns:1fr;gap:8px}
+.more{columns:1}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
-
 <body>
-  <!-- Move to up button -->
-  <div class="scroll-button">
-    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+<div class="wrap">
+<aside>
+  <div>
+    <div class="name">Lokesh Kumar</div>
+    <p class="role">AI Engineer</p>
   </div>
-  <!-- navgaition menu -->
-  <nav class="sticky">
-    <div class="navbar">
-      <div class="logo"><a href="#">Lokesh Kumar</a></div>
-      <ul class="menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <div class="cancel-btn">
-          <i class="fas fa-times"></i>
-        </div>
-      </ul>
-      <div class="media-icons">
-        <a href="https://github.com/Lokesh-DataScience" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
-        <a href="https://medium.com/@lokeshkumar.engineer" target="_blank" rel="noopener"><i
-            class="fab fa-medium-m"></i></a>
-        <a href="https://www.linkedin.com/in/lokesh-kumar-info?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BycOFyeS3Sp%2BwBV2tTaPYAQ%3D%3D"
-          target="_blank" rel="noopener">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </div>
-    </div>
-    <div class="menu-btn">
-      <i class="fas fa-bars"></i>
-    </div>
+  <nav aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
   </nav>
+  <div class="contact">
+    <a href="mailto:hellokumarlokesh@gmail.com">hellokumarlokesh@gmail.com</a>
+    <a href="https://github.com/Lokesh-DataScience">GitHub</a>
+    <a href="https://www.linkedin.com/in/lokesh-kumar-info/">LinkedIn</a>
+  </div>
+</aside>
 
-  <!-- Home Section Start -->
-  <section class="home" id="home">
-    <div class="home-content">
-      <div class="text">
-        <div class="text-one">Hello,</div>
-        <div class="text-two">I'm Lokesh Kumar</div>
-        <div class="text-three"><span id="sliding-text">AI/ML Engineer</span></div>
-        <div class="text-four">From Chhattisgarh</div>
-      </div>
-      <div class="button">
-        <a id="hireMeLink" target="_blank" rel="noopener">
-          <button type="button">Hire Me</button>
-        </a>
-      </div>
+<main>
+<section id="about">
+  <p class="lede">I build LLM applications that retrieve, reason and ship: RAG, text-to-SQL agents and the backends behind them.</p>
+  <p class="sub">AI Engineer with 1+ year of experience in RAG with hybrid retrieval, ReAct-style agents, LLM evaluation and secure FastAPI backends shipped with Docker. I also evaluate LLM outputs as an AI annotator. Open to remote roles and relocation.</p>
+  <div class="btns">
+    <a class="btn p" href="resume/Lokesh_kumar_CV.pdf" download>Download resume</a>
+    <a class="btn s" href="#projects">See projects</a>
+    <a class="btn s" href="mailto:hellokumarlokesh@gmail.com">Email me</a>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="job">
+    <h3>AI Engineer, Apana Time</h3>
+    <div class="meta">Full-time, remote · Jun 2025 – Present</div>
+    <ul>
+      <li>Built an AI/ML/Data Science tutoring chatbot on the Google Gemini API that gives students structured, concept-level explanations. It has served 50+ students queries.</li>
+      <li>Added multimodal ingestion so the chatbot extracts and processes information from images, CSV files and PDFs, and runs automated data cleaning and visualization.</li>
+      <li>Exposed the chatbot through RESTful FastAPI endpoints for integration into web applications.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <h3>AI Annotator, DataAnnotation</h3>
+    <div class="meta">Contract, remote · Jun 2026 – Present</div>
+    <ul>
+      <li>Evaluate and rank LLM responses for correctness, reasoning quality and instruction-following against detailed rubrics, flagging hallucinations and unsafe outputs.</li>
+      <li>Review and write code in AI-assisted programming tasks, finding logic bugs and incorrect model-generated solutions across Python and other languages.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <h3>Data Scientist Intern, Oasis Infobyte</h3>
+    <div class="meta">Remote · Jun 2024</div>
+    <ul>
+      <li>Delivered an end-to-end data science project in a 1-month sprint, applying Python analysis and machine learning to a real-world dataset and producing a model and report that met the program's evaluation criteria.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <article class="proj">
+    <div class="fact"><b>98%</b><span>SQL accuracy on all test queries</span></div>
+    <div>
+      <h3>DataAnalystBot</h3>
+      <p>An AI data analysis platform with RAG question answering, natural-language-to-SQL generation and automated data augmentation. It uses per-user FAISS vector stores and SSE token streaming for real-time chat, and the API is secured with per-user JWT auth in HttpOnly cookies and slowapi rate limiting.</p>
+      <ul class="tags"><li>FastAPI</li><li>Groq / Llama</li><li>LangChain</li><li>FAISS</li><li>PostgreSQL</li><li>Docker Compose</li><li>nginx</li></ul>
+      <p>Containerized with Docker Compose and covered by a 26-test pytest suite. <a href="https://github.com/Lokesh-DataScience/Data-Analyst-Expert-Bot">View on GitHub</a></p>
     </div>
-    <a href="#about" class="scroll-down"
-      style="display: flex; flex-direction: column; align-items: center; position: absolute; left: 50%; bottom: 32px; transform: translateX(-50%); text-decoration: none;">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-        <path d="M12 16V4M12 16L7 11M12 16L17 11" stroke="#4070f4" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round" />
-      </svg>
-      <span style="color:#4070f4; font-size:14px; margin-top:4px;">Scroll Down</span>
-    </a>
-  </section>
+  </article>
 
-  <!-- About Section Start -->
-  <section class="about" id="about">
-    <div class="content">
-      <div class="title"><span>About Me</span></div>
-      <div class="about-details">
-        <div class="left">
-          <img src="Images\about.jpg" alt="" />
-        </div>
-        <div class="right">
-          <div class="topic">Learning is my passion</div>
-          <p>
-            I’m deeply passionate about learning and evolving in the ever-changing world of technology.
-            From exploring the depths of machine learning and statistical thinking to building automation tools,
-            scraping live data, and diving into stock market analytics—I thrive on uncovering how things work and how
-            they can be improved.
-            Whether it’s integrating real-time data visualizations, experimenting with AI agents for freelance
-            automation,
-            or diving into frontend frameworks like React, I constantly seek out opportunities to learn and apply new
-            skills. This drive fuels every project I take on, and I’m always excited to push boundaries with each new
-            challenge.
-          </p>
-          <div class="button">
-            <a href="resume/Lokesh_Kumar_Resume.pdf" download>
-              <button type="button">Download Resume</button>
-            </a>
-          </div>
-        </div>
-      </div>
+  <article class="proj">
+    <div class="fact"><b>90%</b><span>faithfulness relevancy</span></div>
+    <div>
+      <h3>Enterprise RAG Knowledge Assistant</h3>
+      <p>A hybrid retrieval (BM25 + FAISS) assistant over PDF, DOCX, CSV and HTML uploads that returns source-cited answers. The ingestion pipeline parses, chunks and indexes documents, with metadata stored in PostgreSQL through SQLAlchemy and a Streamlit UI on top.</p>
+      <ul class="tags"><li>FastAPI</li><li>Groq</li><li>FAISS</li><li>BM25</li><li>PostgreSQL</li><li>Redis</li><li>Docker Compose</li></ul>
+      <p><a href="https://github.com/Lokesh-DataScience/Enterprise-Rag-Model">View on GitHub</a></p>
     </div>
-  </section>
+  </article>
 
-  <!-- My Skill Section Start -->
-  <section class="skills" id="skills">
-    <div class="content">
-      <div class="title"><span>Skills</span></div>
-      <div class="skills-intro">
-        <div class="topic">Professional Expertise</div>
-        <p>Building modern AI and data-driven solutions with a strong focus on deployment, analytics, and product-ready engineering.</p>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>AI & Machine Learning</h3>
-          <div class="skill-list">
-            <span>Python</span>
-            <span>Machine Learning</span>
-            <span>Deep Learning</span>
-            <span>Data Science</span>
-            <span>Natural Language Processing</span>
-            <span>Computer Vision</span>
-            <span>Large Language Models</span>
-            <span>Statistical Analysis</span>
-            <span>Predictive Modeling</span>
-            <span>Feature Engineering</span>
-            <span>Model Evaluation</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3>Deployment & Backend</h3>
-          <div class="skill-list">
-            <span>TensorFlow</span>
-            <span>Scikit-learn</span>
-            <span>FastAPI</span>
-            <span>Flask</span>
-            <span>Django</span>
-            <span>Django REST Framework</span>
-            <span>Streamlit</span>
-            <span>Docker</span>
-            <span>Rasa</span>
-            <span>SQL</span>
-            <span>REST APIs</span>
-            <span>Model Deployment</span>
-            <span>API Development</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3>Data & Cloud</h3>
-          <div class="skill-list">
-            <span>Data Analytics</span>
-            <span>Data Visualization</span>
-            <span>Database Management</span>
-            <span>Google Sheets</span>
-            <span>Cloud Fundamentals (AWS)</span>
-            <span>MLOps</span>
-            <span>Retrieval-Augmented Generation</span>
-            <span>Chatbot Development</span>
-            <span>Version Control</span>
-            <span>Git</span>
-            <span>GitHub</span>
-            <span>Software Development</span>
-            <span>Agile Development</span>
-          </div>
-        </div>
-      </div>
+  <article class="proj">
+    <div class="fact"><b>RLS</b><span>tenant isolation in Postgres</span></div>
+    <div>
+      <h3>Autonomous Lead Agent</h3>
+      <p>A multi-tenant lead-generation SaaS with live web search (Serper), Groq/Gemini model routing and Supabase Auth. It has a Postgres schema with row-level security, a credit paywall with an atomic decrement transaction, a referral system, and Resend email with inbound reply detection.</p>
+      <ul class="tags"><li>TypeScript</li><li>Supabase</li><li>Postgres RLS</li><li>Groq</li><li>Gemini</li><li>Serper</li><li>Resend</li></ul>
+      <p><a href="https://github.com/Lokesh-DataScience/AI-Lead-Gen">View on GitHub</a> · <a href="https://github.com/Lokesh-DataScience/AI-Lead-Gen-Portfolio">Product page</a></p>
     </div>
-  </section>
+  </article>
 
-  <!-- Experience Section Start -->
-  <section class="experience" id="experience">
-    <div class="content">
-      <div class="title"><span>Experience</span></div>
-      <div class="experience-details">
-        <div class="exp-box">
-          <div class="exp-role">AI Engineer Intern</div>
-          <div class="exp-company">Apana Time</div>
-          <div class="exp-duration">June 2025 – August 2025 (3 months)</div>
-          <div class="exp-desc">
-            <ul>
-              <li>Developed an intelligent chatbot under the guidance of my mentor/manager, designed specifically for AI/ML/DS domain knowledge.</li>
-              <li>The chatbot helps students gain a deeper understanding of domain-specific concepts by answering queries and providing structured explanations.</li>
-              <li>It is capable of performing data cleaning and visualization automatically, leveraging the Google Gemini API.</li>
-              <li>Additionally, the model can extract and process information from multiple data sources, including images, CSV files, and PDFs.</li>
-              <li>Implemented RESTful APIs using FastAPI to seamlessly integrate the chatbot into web applications.</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Add more exp-box blocks as needed -->
-      </div>
+  <article class="proj">
+    <div class="fact"><b>Agent</b><span>text-to-SQL with RAG</span></div>
+    <div>
+      <h3>Olist SQL Agent</h3>
+      <p>An agentic text-to-SQL system over the Olist e-commerce dataset. It turns natural-language questions into SQL, validates the query, runs it safely on DuckDB, and answers from the results, retrieving business rules as context.</p>
+      <ul class="tags"><li>Python</li><li>LangGraph</li><li>DuckDB</li><li>RAG</li></ul>
+      <p><a href="https://github.com/Lokesh-DataScience/olist-sql-agent">View on GitHub</a></p>
     </div>
-  </section>
+  </article>
 
-  <!-- Certificates & Achievements Section Start -->
-  <section class="certificates" id="certificates">
-    <div class="content">
-      <div class="title"><span>Certificates & Achievements</span></div>
-      <div class="achievement-details">
-        <div class="achievement-box">
-          <a href="https://media.geeksforgeeks.org/courses/certificates/abe02a5e4f4be22c3fe3f1cf0ba0e298.pdf" target="_blank" rel="noopener noreferrer">
-            <div class="achievement-title">AWS Solutions Architect – Associate</div>
-          </a>
-          <div class="achievement-subtitle">GeeksforGeeks • Jun 2026</div>
-        </div>
-        <div class="achievement-box">
-          <a href="https://media.geeksforgeeks.org/courses/certificates/abe02a5e4f4be22c3fe3f1cf0ba0e298.pdf" target="_blank" rel="noopener noreferrer">
-            <div class="achievement-title">AWS Cloud Practitioner</div>
-          </a>
-          <div class="achievement-subtitle">GeeksforGeeks • Jun 2026</div>
-        </div>
-        <div class="achievement-box">
-          <a href="https://unstop.com/certificate-preview/6f535ee1-751b-4aed-9747-9bf1a74476ad" target="_blank" rel="noopener noreferrer">
-            <div class="achievement-title">4th Place – AlgoVision Data Analytics Hackathon</div>
-          </a>
-          <div class="achievement-subtitle">KOED × IIT Roorkee • 2025</div>
-        </div>
-        <div class="achievement-box">
-          <a href="https://www.hackerrank.com/certificates/iframe/fe02d4a17648" target="_blank" rel="noopener noreferrer">
-            <div class="achievement-title">Python Certificate</div>
-          </a>
-          <div class="achievement-subtitle">HackerRank • Oct 2024</div>
-        </div>
-        <div class="achievement-box">
-          <a href="https://www.udemy.com/certificate/UC-414e5615-c1f2-4ecf-a4c7-94f8355c77ea/" target="_blank" rel="noopener noreferrer">
-            <div class="achievement-title">Data Science & ML Bootcamp</div>
-          </a>
-          <div class="achievement-subtitle">Udemy</div>
-        </div>
-      </div>
+  <article class="proj">
+    <div class="fact"><b>0.8369</b><span>R² (RMSE 0.4622) on 20,640 rows</span></div>
+    <div>
+      <h3>House Price Prediction MLOps Pipeline</h3>
+      <p>An end-to-end pipeline covering data preparation, training, evaluation and deployment. I compared 6 regression models and selected XGBoost, with experiments tracked in MLflow and the model served through FastAPI.</p>
+      <ul class="tags"><li>scikit-learn</li><li>XGBoost</li><li>MLflow</li><li>FastAPI</li><li>Docker Compose</li><li>pytest</li><li>GitHub Actions</li></ul>
+      <p><a href="https://github.com/Lokesh-DataScience/house-price-mlops">View on GitHub</a></p>
     </div>
-  </section>
+  </article>
 
-  <!-- My Projects Section Start -->
-  <section class="projects" id="projects">
-    <div class="content">
-      <div class="title"><span>My Projects</span></div>
-      <div class="boxes">
-        <a href="projects/data-science.html" class="box">
-          <div class="icon">
-            <i class="fas fa-database"></i>
-          </div>
-          <div class="topic">Data Science Projects</div>
-          <p>Explore end-to-end data science solutions, from data wrangling to predictive modeling and deployment.</p>
-        </a>
-        <a href="projects/data-analysis.html" class="box">
-          <div class="icon">
-            <i class="fas fa-chart-bar"></i>
-          </div>
-          <div class="topic">Data Analysis Projects</div>
-          <p>Insightful data analysis projects focusing on extracting actionable insights from complex datasets.</p>
-        </a>
-        <a href="projects/machine-learning.html" class="box">
-          <div class="icon">
-            <i class="fas fa-robot"></i>
-          </div>
-          <div class="topic">ML Projects</div>
-          <p>Hands-on machine learning projects including classification, regression, and clustering algorithms.</p>
-        </a>
-        <a href="projects/ai.html" class="box">
-          <div class="icon">
-            <i class="fas fa-brain"></i>
-          </div>
-          <div class="topic">AI Projects</div>
-          <p>Innovative AI projects leveraging deep learning, NLP, and generative models for real-world applications.
-          </p>
-        </a>
-      </div>
+  <article class="proj">
+    <div class="fact"><b>85%</b><span>detection accuracy at 24–30 FPS</span></div>
+    <div>
+      <h3>Driver Drowsiness Detector</h3>
+      <p>Real-time drowsiness and yawning detection using OpenCV and MediaPipe face landmarks with Eye Aspect Ratio (EAR) thresholds, escalating alerts and Telegram/WhatsApp notifications.</p>
+      <ul class="tags"><li>Python</li><li>OpenCV</li><li>MediaPipe</li><li>Pygame</li></ul>
+      <p><a href="https://github.com/Lokesh-DataScience/Driver-Drowsiness-Detector">View on GitHub</a></p>
     </div>
-  </section>
+  </article>
 
-  <!-- Contact Me section Start -->
-  <section class="contact" id="contact">
-    <div class="content">
-      <div class="title"><span>Contact Me</span></div>
-      <div class="text">
-        <div class="topic">Got a Project or Idea?</div>
-        <p>If you’re working on something exciting or need help turning an idea into reality, I’d love to hear from you!
-          Whether it's a tech collaboration, freelance project, or just a quick chat about emerging technologies—let’s
-          connect and build something impactful together.</p>
-        <div class="button">
-          <a id="contactMeLink" target="_blank" rel="noopener">
-            <button type="button">Contact Me</button>
-          </a>
-        </div>
-      </div>
+  <article class="proj">
+    <div class="fact"><b>APK</b><span>web app and Android build</span></div>
+    <div>
+      <h3>Be A Banker</h3>
+      <p>A banking-exam preparation app with a study-hours histogram, activity heatmap and weekly planner over per-user data. It uses Supabase Auth with row-level security, a FastAPI backend on Supabase Postgres deployed on Render, and an Android APK built with Capacitor.</p>
+      <ul class="tags"><li>React</li><li>TypeScript</li><li>FastAPI</li><li>Supabase</li><li>Capacitor</li></ul>
+      <p><a href="https://github.com/Lokesh-DataScience/Be-A-Banker">View on GitHub</a></p>
     </div>
-  </section>
+  </article>
 
-  <!-- Footer Section Start -->
-  <footer>
-    <div class="text">
-      <span>Created By Lokesh Kumar</a> | &#169; 2025 All Rights Reserved</span>
-    </div>
-  </footer>
+  <h3 style="margin:32px 0 12px">More work</h3>
+  <ul class="more">
+    <li><a href="https://github.com/Lokesh-DataScience/salon-queue">Salon Queue</a>: queue and token management for local salons</li>
+    <li><a href="https://github.com/Lokesh-DataScience/Stock-Analyzer-Bot">Stock Analyzer Bot</a>: RAG and LLM stock analysis</li>
+    <li><a href="https://github.com/Lokesh-DataScience/Potato-disease-classification">Potato Disease Classification</a>: TensorFlow/Keras image classifier</li>
+    <li><a href="https://github.com/Lokesh-DataScience/Zepto_Case_study">Zepto Case Study</a>: AlgoVision analytics competition, IIT Roorkee</li>
+  </ul>
+</section>
 
-  <script src="script.js"></script>
+<section id="skills">
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Languages</dt><dd>Python, SQL, TypeScript</dd>
+    <dt>GenAI and LLMs</dt><dd>RAG (hybrid BM25 + vector search), prompt engineering, LangChain, LangGraph, CrewAI, ReAct agents, Hugging Face, LoRA/QLoRA fine-tuning, Groq/Llama, Gemini</dd>
+    <dt>Vector DBs and evaluation</dt><dd>FAISS, Pinecone, Ragas, DeepEval, LangSmith, Braintrust, LLM-as-a-Judge</dd>
+    <dt>Backend and data</dt><dd>FastAPI, Flask, Django, SQLAlchemy, PostgreSQL, Redis, Supabase, REST APIs</dd>
+    <dt>ML and vision</dt><dd>scikit-learn, XGBoost, PyTorch, TensorFlow, OpenCV, MediaPipe</dd>
+    <dt>Analytics</dt><dd>pandas, NumPy, Power BI, Tableau, EDA</dd>
+    <dt>Cloud and MLOps</dt><dd>AWS, Docker, Docker Compose, MLflow, Git, pytest</dd>
+  </dl>
+</section>
+
+<section id="education">
+  <h2>Education and certifications</h2>
+  <div class="job">
+    <h3>B.Tech, Artificial Intelligence and Data Science</h3>
+    <div class="meta">Chhattisgarh Swami Vivekanand Technical University, Bhilai · Graduated 2026 · CGPA 8.1/10</div>
+  </div>
+  <ul>
+    <li>AWS Cloud Practitioner and AWS Solutions Architect – Associate (GeeksforGeeks course certificates, Jun 2026)</li>
+    <li>Participant, AlgoVision Data Analytics Case Competition, KOED × IIT Roorkee (COMET'25)</li>
+    <li>HackerRank Python Certificate (2024)</li>
+    <li>Udemy Python for Data Science and Machine Learning Bootcamp (2023)</li>
+    <li>Forage job simulations: British Airways (Data Science) and Accenture North America (Data Analytics and Visualization), May 2024</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p class="sub">I'm looking for AI engineering roles, remote or with relocation. Email is the fastest way to reach me.</p>
+  <div class="btns">
+    <a class="btn p" href="mailto:hellokumarlokesh@gmail.com">hellokumarlokesh@gmail.com</a>
+    <a class="btn s" href="https://www.linkedin.com/in/lokesh-kumar-info/">LinkedIn</a>
+    <a class="btn s" href="https://github.com/Lokesh-DataScience">GitHub</a>
+    <a class="btn s" href="tel:+919302335988">+91 93023 35988</a>
+  </div>
+</section>
+</main>
+</div>
 </body>
-
 </html>
